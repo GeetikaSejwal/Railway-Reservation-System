@@ -1,0 +1,93 @@
+body {
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', serif;
+    box-sizing: border-box;
+ }
+ 
+ #logo { 
+   float: left;
+   display: inline-block;
+ }
+ 
+ .clear {
+   clear: both;
+ }
+ 
+ 
+ #nav { 
+    background-color: whitesmoke;
+    color: black;
+    width: 100%;
+ 
+}
+.nav {
+    float: right;
+    display: inline-flex;
+   list-style: none;    
+    text-align: left;
+    padding: 20px;
+   margin: 0;
+}
+.nav li{
+    width: 120px;
+    height: 20px;
+    padding: 12px;
+}
+.container{
+  position: absolute;
+  top: 30%;
+  left: 0;
+  margin: 50px;
+  max-width: 400px;
+  padding: 16px;
+  background-color: white;
+}
+input[type=text], input[type=password] {
+  width: 92%;
+  padding: 10px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.btn {
+  background-color: turquoise;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+#image-text{ 
+  position: absolute; 
+  top: 50%; 
+  left: 60%; 
+  font-size: 50px;
+  color: whitesmoke; 
+  transform: translate(-30%, -30%); 
+  text-align: right; 
+} 
+#image-text1{
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  color: whitesmoke;
+  transform: translate(-30%, -30%);
+  text-align: right;
+}
+.bdy{
+  font-family: Arial;
+  text-align: center;
+  font-size: 50px;
+}
