@@ -1,0 +1,71 @@
+<html>
+<head>
+<script>
+//form validation
+            function formValidate(){
+                var from= document.getElementById('from')
+                var to= document.getElementById('to')
+
+               if(from.value.trim()==''){
+                   alert('Staion must be filled out')
+                   from.style.border='2px solid red';
+                   document.getElementById('lb1').style.visibility='visible'
+                   return false;
+               }
+                else if(to.value.trim()==''){
+                    alert('Station must be filled')
+                    to.style.border='2px solid red';
+                   document.getElementById('lb2').style.visibility='visible'
+                    return false;
+                }
+                else{
+                    return true
+                }
+            }
+            // to view results of the form
+            function results(){
+                var from = document.getElementById('from').value;
+                var to = document.getElementById('to').value;
+                var date = document.getElementById('date').value;
+                var list = document.getElementById('list').value;
+
+                document.write("<h1>Thank you for Using the services of Rail Yatra.</h1>");
+                document.write("<h1>Your Ticket is successfully booked</h1>");
+                document.write("<h3> here is your ticket information actual ticket will be mailed to you shortly...</h3>")
+                document.write(from + " " + "to"+ " " + to + "<br>")
+                document.write(date + " " + list)
+                document.write("<h2>Rail yatra wishes you a very comfortable and safe journey</h2>")
+                document.write("<h2>Please maintain proper social distancing at stations as well as in train and please maintain proper hygiene")
+            }
+          </script>
+        </head>
+        <body>
+        <form  onsubmit="return formValidate() && results()" class="container" method="GET">
+            <h1 class="h">Book Your Ticket</h1>
+            <img src="images/book_train.png" height="50px" width="50px" class="book_train">
+            <br>
+              <input type="text" placeholder="Enter Starting Station" id="from">
+              <label id="lb1" style="color: red; visibility: hidden;">Invalid Station</label>
+              <input type="text"  placeholder="Enter Destination Station" id="to" >
+              <label id="lb2" style="color: red; visibility: hidden;">Invalid Station</label>
+              <br>
+              <label for="date">date*</label>
+              <input type="date" name="date" id="date" required><br><br>
+              <label for="list">Class</label>
+              <select name="list" size="1" id="list" required>
+                    <option value="All Classes">All Classes</option>
+                    <option value="Anubhuti Class(EA)">Anubhuti Class(EA)</option>
+                    <option value="AC First Class(1A)">AC First Class(1A)</option>
+                    <option value="Exec. Chair Car(EC)">Exec. Chair Car(EC)</option>
+                    <option value="AC 2 Tier(2A)">AC 2 Tier(2A)</option>
+                    <option value="First Class(FC)">First Class(FC)</option>
+                    <option value="AC 3 Tier(3A)">AC 3 Tier(3A)</option>
+                    <option value="AC 3 Economy(3E)">AC 3 Economy(3E)</option>
+                    <option value="AC Chair Car(CC)">AC Chair Car(CC)</option>
+                    <option value="Sleeper(SL)">Sleeper(SL)</option>
+                    <option value="Second Sitting(2S)">Second Sitting(2S)</option>
+                </select><br><br>
+              <input type="submit" class="btn" value="Book Ticket"></button>
+            </form>
+            </body>
+        </html
